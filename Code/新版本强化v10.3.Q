@@ -27,12 +27,14 @@ UEsDBBQAAgAIAAhqLD7CiDGndgAAABIEAAAKABEAvfC/4tfWLmJtcFVUDQAHpKktTYB+z0/fe9BNc/IV
 
 
 [Script]
-UserVar ss2123612321="---------------" "简单游公司依据本协议的规定提供DNF自动强化功能服务，本协议具有合同效力。您必须完全同意本协议，才能够享受本网站提供的DNF自动强化功能服务"
-UserVar ss2123612321="---------------" "（1） 凡使用本功能的用户， 务必确认试用脚本时功能正常，并且认真阅读脚本说明以及本协议"
-UserVar ss2123612321="---------------" "（2） 该功能经过作者测试功能正常，但脚本无法保证适用于所有电脑，可能会有极小概率遇到未知错误（如网络延迟，电脑系统，电脑软硬件问题导致脚本错误操作），因以上因素导致的一切后果，由使用者自行承担"
-UserVar ss2123612321="---------------" "（3） 用户可随时停止本协议，即随时停止使用此功能"
-UserVar ss2123612321="---------------" "友情提示：脚本提供每天试用十次的机会，请先确保脚本功能使用正常再订购；  如您需要的脚本功能涉及到游戏中的贵重物品，请在使用前妥善保管存放（建议绑定）"
-UserVar ftyxy=DropList{"是":"0"|"否":"1"}=0 "同意请按<是> 不同意请按<否>"
+/*
+Permission to use this program.When you use it,please keep the statement.
+This program is Writeen by hyh.
+My github address:https://github.com/a417484830
+If you have any questions,you can email me:kk29299@163.com
+*/
+
+
 UserVar 事实上="---------------" "基本设置"
 UserVar xpnr=DropList{"是":"0"|"否":"1"}=0 "是否开启实时显屏"
 UserVar qht=DropList{"是":"0"|"否":"1"}=0 "是否开启后台模式"
@@ -77,10 +79,6 @@ UserVar sxdd = 60 "上线后等待多久（单位秒）"
 UserVar 事实上="---------------" "报警设置"
 UserVar bjyy="C:\附件\报警.mp3" "报警音乐路径"
 Dim jsb(9)
-If ftyxy=1 Then
-    MessageBox "您拒绝了脚本使用协议，脚本将结束运行"
-    EndScript
-End If
 PutAttachment "c:\附件","*.*"
 PutAttachment ".\Plugin" ,"RegDll.dll"
 Call Plugin.RegDll.Reg("c:\附件\dm.dll")
